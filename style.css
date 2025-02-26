@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'alata';
+    src: url('src/fonts/Alata/Alata-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'albert_sans';
+    src: url('src/fonts/Albert_Sans/AlbertSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'archivo';
+    src: url('src/fonts/Archivo_Black/ArchivoBlack-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'alata', 'archivio', 'albert-sans';
+}
+
+
+/* Front page */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('src/images/frontpage.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_title{
+    font-style: 'archivio';
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero_nav{
+    font-style: 'alata';
+}
+
+.hero_overlay {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+nav a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* About me */
+
+.about_me {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.about_title {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
+.about_title::before,
+.about_title::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+}
+
+.about_title::before {
+    left: -410px;
+}
+
+.about_title::after {
+    right: -410px;
+}
+
+
+.about_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.profile_pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 50px;
+    margin-top: -150px;
+}
+
+.about_text {
+    max-width: 400px;
+    font-size: 16px;
+    margin-top: 20px;
+    font-family: 'albert_sans';
+    margin-right: 150px;
+}
+
+.about_subtitle {
+    font-family: 'alata';
+
+}
+
+.about_icon_text {
+    display: flex;
+    align-items: center;  /* Zorgt ervoor dat de tekst en de pijl goed uitgelijnd zijn */
+  }
+  
+  .collaborate {
+    margin-right: 8px;  /* Ruimte tussen het woord 'samenwerken' en de pijl */
+  }
+  
+  .arrow_icon {
+    width: 16px;  /* Pas de grootte van de SVG aan */
+    height: 16px; /* Zorg ervoor dat de SVG klein blijft */
+  }
