@@ -29,6 +29,34 @@ body {
     font-family: 'alata', 'archivio', 'albert-sans';
 }
 
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
+.title::before,
+.title::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+}
+
+.title::before {
+    left: -410px;
+}
+
+.title::after {
+    right: -410px;
+}
+
+
 
 /* Front page */
 
@@ -79,34 +107,6 @@ nav a:hover {
     text-align: center;
 }
 
-.about_title {
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-
-.about_title::before,
-.about_title::after {
-    content: "";
-    position: absolute;
-    width: 400px;
-    height: 2px;
-    background-color: black;
-    top: 50%;
-}
-
-.about_title::before {
-    left: -410px;
-}
-
-.about_title::after {
-    right: -410px;
-}
-
-
 .about_content {
     display: flex;
     align-items: center;
@@ -146,5 +146,58 @@ nav a:hover {
 .arrow_icon{
     width: 20px;
     height: 20px;
+    text-decoration: none;
 }
 
+/* Portfolio */
+
+.portfolio {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+
+
+.project-carousel {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card {
+    background: white;
+    box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 500px;
+    height: 200px;
+}
+
+.project-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: black;
+}
+
+.swiper-pagination-bullet {
+    background: black;
+}

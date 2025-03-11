@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <div class="hero">
@@ -19,7 +20,7 @@
 
 
     <div class="about_me">
-        <h2 id="about_me" class="about_title">Over mij</h2>
+        <h2 id="about_me" class="title">Over mij</h2>
         <div class="about_content">
             <img src="src/images/profile.jpg" alt="Paris Stassen" class="profile_pic">
             <div class="about_text">
@@ -48,6 +49,59 @@
             </div>
         </div>
     </div>
+
+    <div class="portfolio">
+        <h2 id="portfolio" class="title">Portfolio</h2>
+
+
+        <div class="project-carousel">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <img src="src\images\frontpage.png" alt="Portfolio website">
+                            <h3>Portfolio website</h3>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <img src="src\images\frontpage.png" alt="Portfolio website">
+                            <h3>Portfolio website</h3>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <img src="src\images\frontpage.png" alt="Portfolio website">
+                            <h3>Portfolio website</h3>
+                        </div>
+                    </div>
     
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <img src="src\images\frontpage.png" alt="BISS Graph">
+                            <h3>BISS Graph</h3>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <img src="src\images\frontpage.png" alt="Lawnotation">
+                            <h3>Lawnotation</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
