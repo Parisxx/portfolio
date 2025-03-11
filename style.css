@@ -122,7 +122,7 @@ nav a:hover {
     border-radius: 50%;
     object-fit: cover;
     margin-right: 50px;
-    margin-top: -150px;
+    margin-top: -500px;
 }
 
 .about_text {
@@ -139,7 +139,8 @@ nav a:hover {
 
 .about_subtitle {
     font-family: 'alata';
-    margin-top: 20px;
+    margin-top: 30px;
+    font-size: 20px;
 
 }
 
@@ -175,6 +176,11 @@ nav a:hover {
     justify-content: center;
     align-items: center;
 }
+
+.swiper-slide h3 {
+    text-decoration: none;
+}
+
 
 .project-card {
     background: white;

@@ -6,8 +6,11 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="icon" type="image/x-icon" href="src\images\profile.jpg">
 </head>
 <body>
+
+    <!-- Hero section -->
     <div class="hero">
         <div class="hero_overlay">
             <h1 class="hero_title">Paris Stassen</h1>
@@ -18,77 +21,94 @@
         </div>
     </div>
 
-
+    <!-- About me -->
     <div class="about_me">
         <h2 id="about_me" class="title">Over mij</h2>
         <div class="about_content">
             <img src="src/images/profile.jpg" alt="Paris Stassen" class="profile_pic">
             <div class="about_text">
-                <p><b>Hi, ik ben Paris!</b> Een gedreven softwareontwikkelaar met een creatieve blik op technologie en design.</p>
+                <p><b>Hi, ik ben Paris!</b> Een softwareontwikkelaar met een creatieve blik op technologie en design.</p>
 
                 <p>Mijn passie ligt bij het ontwikkelen van interactieve en gebruiksvriendelijke applicaties. 
-                Ik vind het geweldig om technologie en design samen te brengen met front-end development en UI/UX-design.
-                Ik geloof in blijvend leren en experimenteren om mee te groeien met de snel veranderende digitale wereld.</p>
+                    Ik vind het geweldig om technologie en design samen te brengen met front-end development en UI/UX-design. 
+                    Van strakke interfaces tot intuïtieve gebruikerservaringen – ik zorg ervoor dat software niet alleen 
+                    goed werkt, maar ook prettig aanvoelt.</p>
 
-                <div>
-                    <span>Benieuwd naar mijn werk? Neem een kijkje in mijn portfolio en laten we samenwerken!</span>
-                    <a href="#portfolio">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow_icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg> 
-                    </a>
-                </div>
+                <p class="about_subtitle">Mijn groei</p>
 
-                <p class="about_subtitle">Mijn groei tijdens de opleiding</p>
+                <p>Tijdens mijn opleiding was ik eerst geïnteresseerd in back-end development. Maar naarmate ik meer over mezelf en mijn werkstijl leerde, ontdekte ik dat mijn echte passie ligt in front-end en UI/UX-design. 
+                    Ik besefte dat goede software niet alleen functioneel moet zijn, 
+                    maar ook intuïtief en visueel aantrekkelijk.</p>
 
-                <p>In het begin had ik totaal geen idee wat ik wilde gaan doen. 
-                Ik had wel een beetje intresse in de techinische kant maar naarmate ik meer projecten maakte, 
-                ontdekte ik mijn passie voor UI/UX-design en front-end development. 
-                Ik besefte dat goede software niet alleen goed moet werken, maar ook intuïtief en aantrekkelijk moet zijn.</p>
+                <p>Tijdens mijn stage kreeg ik de kans om deze passie verder te ontwikkelen. 
+                    Ik werkte met tools zoals <b>Vue.js, Figma en JavaScript</b>
+                    om interfaces te ontwerpen en interactieve elementen te creëren. 
+                    Dit gaf me niet alleen technische ervaring, 
+                    maar ook een dieper inzicht in hoe gebruikers denken en navigeren.</p>
+
+                <p>Door deze opleiding heb ik niet alleen mijn vaardigheden ontwikkeld, 
+                    maar ook geleerd wat écht bij me past.</p>
+
+                    <div>
+                        <span>Benieuwd naar mijn werk? Neem een kijkje in mijn portfolio en laten we samenwerken!</span>
+                        <a href="#portfolio">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow_icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg> 
+                        </a>
+                    </div>
 
             </div>
         </div>
     </div>
 
+    <!-- Portfolio -->
     <div class="portfolio">
         <h2 id="portfolio" class="title">Portfolio</h2>
-
 
         <div class="project-carousel">
             <div class="swiper">
                 <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="portfolio.html">
+                            <div class="project-card">
+                                <img src="src\images\portfolio-website.png" alt="Portfolio website">
+                                <h3>Portfolio website</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="graph.html">
+                            <div class="project-card">
+                                <img src="src\images\biss-graph.png" alt="BISS Graph">
+                                <h3>BISS Graph</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="lawnotation.html">
+                            <div class="project-card">
+                                <img src="src\images\lawnotation-landingpage.png" alt="Lawnotation">
+                                <h3>Lawnotation</h3>
+                            </div>
+                        </a>
+                    </div>
+                    
+
                     <div class="swiper-slide">
                         <div class="project-card">
                             <img src="src\images\frontpage.png" alt="Portfolio website">
-                            <h3>Portfolio website</h3>
+                            <h3>text</h3>
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="project-card">
                             <img src="src\images\frontpage.png" alt="Portfolio website">
-                            <h3>Portfolio website</h3>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="project-card">
-                            <img src="src\images\frontpage.png" alt="Portfolio website">
-                            <h3>Portfolio website</h3>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-slide">
-                        <div class="project-card">
-                            <img src="src\images\frontpage.png" alt="BISS Graph">
-                            <h3>BISS Graph</h3>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-slide">
-                        <div class="project-card">
-                            <img src="src\images\frontpage.png" alt="Lawnotation">
-                            <h3>Lawnotation</h3>
+                            <h3>text</h3>
                         </div>
                     </div>
                 </div>
@@ -103,5 +123,7 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="script.js"></script>
     </div>
+
+    <!-- Footer -->
 </body>
 </html>
