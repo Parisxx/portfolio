@@ -138,16 +138,8 @@ nav a:hover {
 
 }
 
-.about_icon_text {
-    display: flex;
-    align-items: center;  /* Zorgt ervoor dat de tekst en de pijl goed uitgelijnd zijn */
-  }
-  
-  .collaborate {
-    margin-right: 8px;  /* Ruimte tussen het woord 'samenwerken' en de pijl */
-  }
-  
-  .arrow_icon {
-    width: 16px;  /* Pas de grootte van de SVG aan */
-    height: 16px; /* Zorg ervoor dat de SVG klein blijft */
-  }
+.arrow_icon{
+    width: 20px;
+    height: 20px;
+}
+
