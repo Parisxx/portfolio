@@ -133,8 +133,13 @@ nav a:hover {
     margin-right: 150px;
 }
 
+.about_text p {
+    margin-bottom: 20px;
+}
+
 .about_subtitle {
     font-family: 'alata';
+    margin-top: 20px;
 
 }
 
