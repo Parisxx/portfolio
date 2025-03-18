@@ -6,7 +6,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="icon" type="image/x-icon" href="src\images\profile.jpg">
+    <link rel="icon" type="image/x-icon" href="src\images\icon.png">
 </head>
 <body>
 
@@ -65,65 +65,95 @@
     <!-- Portfolio -->
     <div class="portfolio">
         <h2 id="portfolio" class="title">Portfolio</h2>
-
-        <div class="project-carousel">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <a href="portfolio.html">
-                            <div class="project-card">
-                                <img src="src\images\portfolio-website.png" alt="Portfolio website">
-                                <h3>Portfolio website</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="graph.html">
-                            <div class="project-card">
-                                <img src="src\images\biss-graph.png" alt="BISS Graph">
-                                <h3>BISS Graph</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="lawnotation.html">
-                            <div class="project-card">
-                                <img src="src\images\lawnotation-landingpage.png" alt="Lawnotation">
-                                <h3>Lawnotation</h3>
-                            </div>
-                        </a>
-                    </div>
-                    
-
-                    <div class="swiper-slide">
-                        <div class="project-card">
-                            <img src="src\images\frontpage.png" alt="Portfolio website">
-                            <h3>text</h3>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="project-card">
-                            <img src="src\images\frontpage.png" alt="Portfolio website">
-                            <h3>text</h3>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
     
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <div class="slideshow-container">
+            <div class="slide">
+                <a href="https://www.w3schools.com">
+                    <img src="src/images/frontpage.png" alt="Portfolio Website">
+                    <div class="text">Portfolio</div>
+                </a>
+            </div>
+    
+            <div class="slide">
+                <a href="https://www.w3schools.com">
+                    <img src="src/images/biss-graph.png" alt="Portfolio Website">
+                    <div class="text">BISS graph</div>
+                </a>
+            </div>
+    
+            <div class="slide">
+                <a href="https://www.w3schools.com">
+                    <img src="src/images/lawnotation-landingpage.png" alt="Portfolio Website">
+                    <div class="text">Lawnotation</div>
+                </a>
+            </div>
+
+            <div class="slide">
+                <a href="https://www.w3schools.com">
+                    <img src="src/images/test.png" alt="Portfolio Website">
+                    <div class="text">test</div>
+                </a>
+            </div>
+
+            <div class="slide">
+                <a href="https://www.w3schools.com">
+                    <img src="src/images/test.png" alt="Portfolio Website">
+                    <div class="text">test 2</div>
+                </a>
+            </div> 
+
+            <div class="slide">
+                <a href="https://www.w3schools.com">
+                    <img src="src/images/test.png" alt="Portfolio Website">
+                    <div class="text">test 3</div>
+                </a>
+            </div> 
+
+            <!-- Navigation buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+    
+        <!-- The dots/circles -->
+        <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span> 
+            <span class="dot"></span>
+            <span class="dot"></span> 
+        </div>
         <script src="script.js"></script>
     </div>
+    
 
     <!-- Footer -->
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Paris Stassen</h3>
+            <p><a href="mailto:parisstassen@gmail.com">Parisstassen@gmail.com</a></p>
+            <p>06 2485 1790</p>
+        </div>
+    
+        <div class="footer-section">
+            <h3>Pagina’s</h3>
+            <p><a href="#about_me">Over mij</a></p>
+            <p><a href="#portfolio">Portfolio</a></p>
+        </div>
+    
+        <div class="footer-section social">
+            <h3>Social media</h3>
+            <div class="social-container">
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/paris-stassen-7067b7223/"><img src="src\images\linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://www.instagram.com/parisx217/"><img src="src\images\instagram.png" alt="Instagram"></a>
+                    <a href="https://github.com/Parisxx?tab=overview&from=2025-02-01&to=2025-02-19"><img src="src\images\github.png" alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
