@@ -29,7 +29,7 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Portfolio</title>
     <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="icon" type="image/x-icon" href="src\images\profile.jpg">
+    <link rel="icon" type="image/x-icon" href="src\images\icon.png">
 
 </head>
 <body>
@@ -46,17 +46,30 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <!-- Project details -->
 
+
+
+
+
     <div class="project-details">
-        <h2><?php echo htmlspecialchars($project['title']); ?></h2>
+    <h2><?php echo htmlspecialchars($project['title']); ?></h2>
+    <div class="content">
         <p><?php echo htmlspecialchars($project['about']); ?></p>
         <img src="src/images/<?php echo htmlspecialchars($project['image']); ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
+        <?php if (!empty($project['link'])): ?>
+            <p><a href="<?php echo htmlspecialchars($project['link']); ?>" target="_blank"><?php echo htmlspecialchars($project['link']); ?></a></p>
+        <?php endif; ?>
+    </div>
+</div>
+
+
+        
+        
         <h3>Documents</h3>
         <ul>
             <?php foreach ($project_documents as $document): ?>
-                <li><a href="src/documents/<?php echo htmlspecialchars($document['documents']); ?>"><?php echo htmlspecialchars($document['documents']); ?></a></li>
+                <li><a href="src/documents/<?php echo htmlspecialchars($document['documents']); ?>" target="_blank"><?php echo htmlspecialchars($document['documents']); ?></a></li>
             <?php endforeach; ?>
         </ul>
-    </div>
     
 </body>
 </html>

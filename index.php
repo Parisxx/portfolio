@@ -87,13 +87,10 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
             <?php endforeach; ?>
     
-            <!-- Navigation buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
     
-        <!-- The dots/circles -->
         <div class="dots-container">
             <?php for ($i = 0; $i < count($projects); $i++): ?>
                 <span class="dot" onclick="currentSlide(<?php echo $i + 1; ?>)"></span>
