@@ -78,48 +78,15 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <h2 id="portfolio" class="title">Portfolio</h2>
     
         <div class="slideshow-container">
-            <div class="slide">
-                <a href="projects.php?project_id=1">
-                    <img src="src\images\portfolio-website.png" alt="Portfolio Website">
-                    <div class="text">Portfolio</div>
-                </a>
-            </div>
+            <?php foreach ($projects as $project): ?>
+                <div class="slide">
+                    <a href="project.php?id=<?php echo $project['project_id']; ?>">
+                        <img src="src/images/<?php echo $project['front_image']; ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
+                        <div class="text"><?php echo htmlspecialchars($project['title']); ?></div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
     
-            <div class="slide">
-                <a href="projects\graph.html">
-                    <img src="src/images/biss-graph.png" alt="Portfolio Website">
-                    <div class="text">BISS graph</div>
-                </a>
-            </div>
-    
-            <div class="slide">
-                <a href="projects\lawnotation.html">
-                    <img src="src/images/lawnotation-landingpage.png" alt="Portfolio Website">
-                    <div class="text">Lawnotation</div>
-                </a>
-            </div>
-
-            <div class="slide">
-                <a href="https://www.w3schools.com">
-                    <img src="src/images/test.png" alt="Portfolio Website">
-                    <div class="text">test</div>
-                </a>
-            </div>
-
-            <div class="slide">
-                <a href="https://www.w3schools.com">
-                    <img src="src/images/test.png" alt="Portfolio Website">
-                    <div class="text">test 2</div>
-                </a>
-            </div> 
-
-            <div class="slide">
-                <a href="https://www.w3schools.com">
-                    <img src="src/images/test.png" alt="Portfolio Website">
-                    <div class="text">test 3</div>
-                </a>
-            </div> 
-
             <!-- Navigation buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>

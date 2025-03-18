@@ -1,10 +1,22 @@
 <?php
-require 'db.php';
+require 'db.php'; 
 
-$stmt = $pdo->query("SELECT * FROM projects");
-$projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$project_id = isset($_GET['id']) && is_numeric($_GET['id']) ? (int)$_GET['id'] : 0;
 
-$stmt = $pdo->query("SELECT * FROM project_documents");
+if ($project_id <= 0) {
+    exit("Invalid project ID.");
+}
+
+$stmt = $pdo->prepare("SELECT * FROM projects WHERE project_id = :project_id");
+$stmt->execute(['project_id' => $project_id]);
+$project = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$project) {
+    exit("Project not found.");
+}
+
+$stmt = $pdo->prepare("SELECT * FROM project_documents WHERE project_id = :project_id");
+$stmt->execute(['project_id' => $project_id]);
 $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
@@ -28,26 +40,23 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <h1 class="logo">Paris Stassen</h1>
         <nav class="nav">
             <a href="index.php#about_me">Over mij</a>
-            <a href="#">Portfolio</a>
+            <a href="index.php#portfolio">Portfolio</a>
         </nav>
     </header>
 
+    <!-- Project details -->
 
-
-    <?php foreach ($projects as $project): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($project['project_id']); ?></td>
-                    <td><?php echo htmlspecialchars($project['title']); ?></td>
-                    <td><?php echo htmlspecialchars($project['about']); ?></td>
-                    <td><?php echo htmlspecialchars($project['image']); ?></td>
-                </tr>
+    <div class="project-details">
+        <h2><?php echo htmlspecialchars($project['title']); ?></h2>
+        <p><?php echo htmlspecialchars($project['about']); ?></p>
+        <img src="src/images/<?php echo htmlspecialchars($project['image']); ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
+        <h3>Documents</h3>
+        <ul>
+            <?php foreach ($project_documents as $document): ?>
+                <li><a href="src/documents/<?php echo htmlspecialchars($document['documents']); ?>"><?php echo htmlspecialchars($document['documents']); ?></a></li>
             <?php endforeach; ?>
-
-
-
-
-    
-    
+        </ul>
+    </div>
     
 </body>
 </html>
