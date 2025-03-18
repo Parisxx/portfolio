@@ -1,3 +1,14 @@
+<?php
+require 'db.php';
+
+$stmt = $pdo->query("SELECT * FROM projects");
+$projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$stmt = $pdo->query("SELECT * FROM project_documents");
+$project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +79,7 @@
     
         <div class="slideshow-container">
             <div class="slide">
-                <a href="projects\portfolio.html">
+                <a href="projects.php?project_id=1">
                     <img src="src\images\portfolio-website.png" alt="Portfolio Website">
                     <div class="text">Portfolio</div>
                 </a>

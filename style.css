@@ -247,6 +247,10 @@ nav a:hover {
     font-family: 'alata';
 }
 
+.footer p{
+    font-family: 'albert_sans';
+}
+
 .footer-section {
     flex: 1;
     text-align: center;
@@ -287,6 +291,4 @@ nav a:hover {
     height: 24px;
 }
 
-.footer p{
-    font-family: 'albert_sans';
-}
+
