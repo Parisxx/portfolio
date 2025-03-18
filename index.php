@@ -95,12 +95,9 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
         <!-- The dots/circles -->
         <div class="dots-container">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span> 
-            <span class="dot"></span>
-            <span class="dot"></span> 
+            <?php for ($i = 0; $i < count($projects); $i++): ?>
+                <span class="dot" onclick="currentSlide(<?php echo $i + 1; ?>)"></span>
+            <?php endfor; ?>
         </div>
         <script src="script.js"></script>
     </div>
