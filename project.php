@@ -51,25 +51,38 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
     <div class="project-details">
-    <h2><?php echo htmlspecialchars($project['title']); ?></h2>
-    <div class="content">
-        <p><?php echo htmlspecialchars($project['about']); ?></p>
-        <img src="src/images/<?php echo htmlspecialchars($project['image']); ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
+        <h2><?php echo htmlspecialchars($project['title']); ?></h2>
+        <div class="content">
+            <p><?php echo htmlspecialchars($project['about']); ?></p>
+            <img src="src/images/<?php echo htmlspecialchars($project['image']); ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
+        </div>
+
         <?php if (!empty($project['link'])): ?>
-            <p><a href="<?php echo htmlspecialchars($project['link']); ?>" target="_blank"><?php echo htmlspecialchars($project['link']); ?></a></p>
+            <p class="link"><a href="<?php echo htmlspecialchars($project['link']); ?>" target="_blank"><?php echo htmlspecialchars($project['link']); ?></a></p>
         <?php endif; ?>
     </div>
-</div>
-
 
         
-        
-        <h3>Documents</h3>
-        <ul>
+        <!-- Documents -->
+
+    <div class="document">
+        <h2 class="title">Documentatie</h2>
+
+        <div class="card-container">
             <?php foreach ($project_documents as $document): ?>
-                <li><a href="src/documents/<?php echo htmlspecialchars($document['documents']); ?>" target="_blank"><?php echo htmlspecialchars($document['documents']); ?></a></li>
+                <div class="card">
+                    <a href="src/documents/<?php echo htmlspecialchars($document['documents']); ?>" target="_blank" class="card-link">
+                        <h3 class="card-title"><?php echo htmlspecialchars($document['title']); ?></h3>
+                        <p class="card-description"><?php echo htmlspecialchars($document['description']); ?></p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+
+                    </a>
+                </div>
             <?php endforeach; ?>
-        </ul>
-    
+        </div>
+
+    </div>
 </body>
 </html>

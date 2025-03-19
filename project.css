@@ -25,6 +25,35 @@ body {
     scroll-behavior: smooth;
 }
 
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-family: 'alata';
+}
+
+
+.title::before,
+.title::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+}
+
+.title::before {
+    left: -410px;
+}
+
+.title::after {
+    right: -410px;
+}
+
+
 /* Header */
 
 .header {
@@ -64,21 +93,78 @@ body {
 }
 
 .project-details h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: 'alata';
+    
 }
 
 .content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 .content p {
     width: 60%; 
-    margin-right: 20px;
+    font-family: 'albert_sans';
 }
 
 .content img {
-    width: 100px;
+    width: 30%;
+    margin-left: 10%;
+}
+
+.link{
+    font-family: 'alata';
+    
+}
+
+/* Documents */
+
+.document {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
+    gap: 16px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #BFD7EA;
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    margin: 8px 0;
+}
+
+.arrow {
+    align-self: flex-end;
+    width: 24px;
+    height: 24px;
 }
