@@ -156,11 +156,13 @@ body {
 .card-title {
     font-size: 1.2rem;
     font-weight: bold;
+    font-family: 'alata';
 }
 
 .card-description {
     font-size: 0.9rem;
     margin: 8px 0;
+    font-family: 'albert_sans';
 }
 
 .arrow {
