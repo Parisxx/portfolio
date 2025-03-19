@@ -84,5 +84,32 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
 
     </div>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+        <div class="footer-section">
+            <h3>Paris Stassen</h3>
+            <p><a href="mailto:parisstassen@gmail.com">Parisstassen@gmail.com</a></p>
+            <p>06 2485 1790</p>
+        </div>
+    
+        <div class="footer-section">
+            <h3>Pagina’s</h3>
+            <p><a href="#about_me">Over mij</a></p>
+            <p><a href="#portfolio">Portfolio</a></p>
+        </div>
+    
+        <div class="footer-section social">
+            <h3>Social media</h3>
+            <div class="social-container">
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/paris-stassen-7067b7223/"><img src="src\images\linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://www.instagram.com/parisx217/"><img src="src\images\instagram.png" alt="Instagram"></a>
+                    <a href="https://github.com/Parisxx?tab=overview&from=2025-02-01&to=2025-02-19"><img src="src\images\github.png" alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
