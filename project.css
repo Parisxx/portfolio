@@ -171,6 +171,11 @@ body {
     height: 24px;
 }
 
+.project-image{
+    width: auto;
+    height: auto;
+}
+
 /* Footer */
 
 .footer {
