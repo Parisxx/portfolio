@@ -96,8 +96,8 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
         <div class="footer-section">
             <h3>Pagina’s</h3>
-            <p><a href="#about_me">Over mij</a></p>
-            <p><a href="#portfolio">Portfolio</a></p>
+            <p><a href="index.php#about_me">Over mij</a></p>
+            <p><a href="index.php#portfolio">Portfolio</a></p>
         </div>
     
         <div class="footer-section social">
