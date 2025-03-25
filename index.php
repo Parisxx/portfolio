@@ -92,8 +92,7 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </a>
                 </div>
             <?php endforeach; ?>
-
-            <!-- Duplicate the first few slides at the end -->
+            
             <?php for ($i = 0; $i < $slidesToClone; $i++): ?>
                 <div class="slide duplicate">
                     <a href="project.php?id=<?php echo $projects[$i]['project_id']; ?>">

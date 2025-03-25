@@ -46,10 +46,6 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <!-- Project details -->
 
-
-
-
-
     <div class="project-details">
         <h2><?php echo htmlspecialchars($project['title']); ?></h2>
         <div class="content">

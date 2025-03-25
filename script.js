@@ -16,7 +16,7 @@ function showSlides() {
         slides[indexToShow].style.display = 'block';
     }
 
-    
+
     dots.forEach(dot => dot.classList.remove('active'));
     dots[slideIndex % dots.length].classList.add('active');
 }
@@ -34,6 +34,15 @@ function plusSlides(n) {
         slideIndex = 0;
     }
     
+    showSlides();
+}
+
+
+function currentSlide(n) {
+    const totalSlides = slides.length;
+    
+    slideIndex = (n - 1) % totalSlides;
+
     showSlides();
 }
 
