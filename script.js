@@ -1,5 +1,6 @@
 let slideIndex = 0; 
 const slides = document.querySelectorAll('.slide');
+const duplicates = document.querySelectorAll('.duplicate');
 const dots = document.querySelectorAll('.dot');
 const slidesPerView = 3; 
 
@@ -15,18 +16,23 @@ function showSlides() {
         slides[indexToShow].style.display = 'block';
     }
 
-
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('active');
-    }
-    dots[slideIndex].classList.add('active');
+    
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[slideIndex % dots.length].classList.add('active');
 }
-
 
 function plusSlides(n) {
     const totalSlides = slides.length;
 
-    slideIndex = (slideIndex + n + totalSlides) % totalSlides; 
+    slideIndex += n;
+
+    if (slideIndex < 0) {
+        slideIndex = totalSlides - duplicates.length - 1;
+    }
+
+    if (slideIndex >= totalSlides - duplicates.length) {
+        slideIndex = 0;
+    }
     
     showSlides();
 }
