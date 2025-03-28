@@ -49,12 +49,12 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="project-details">
         <h2><?php echo htmlspecialchars($project['title']); ?></h2>
         <div class="content">
-            <p><?php echo htmlspecialchars($project['about']); ?></p>
-            <img class="project-image" src="src/images/<?php echo htmlspecialchars($project['image']); ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
+            <p><?php echo htmlspecialchars($project['description']); ?></p>
+            <img class="project-image" src="src/images/<?php echo htmlspecialchars($project['thumbnail']); ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
         </div>
 
-        <?php if (!empty($project['link'])): ?>
-            <p class="link"><a href="<?php echo htmlspecialchars($project['link']); ?>" target="_blank"><?php echo htmlspecialchars($project['link']); ?></a></p>
+        <?php if (!empty($project['external_link'])): ?>
+            <p class="link"><a href="<?php echo htmlspecialchars($project['external_link']); ?>" target="_blank"><?php echo htmlspecialchars($project['external_link']); ?></a></p>
         <?php endif; ?>
     </div>
 
@@ -67,9 +67,9 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="card-container">
     <?php foreach ($project_documents as $document): ?>
         <?php 
-            $href = !empty($document['documents']) 
-                ? "src/documents/" . htmlspecialchars($document['documents']) 
-                : htmlspecialchars($document['link']); 
+            $href = !empty($document['file_name']) 
+                ? "src/documents/" . htmlspecialchars($document['file_name']) 
+                : htmlspecialchars($document['resource_link']); 
         ?>
         <div class="card">
             <a href="<?php echo $href; ?>" target="_blank" class="card-link">

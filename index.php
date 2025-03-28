@@ -87,7 +87,7 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
             foreach ($projects as $project): ?>
                 <div class="slide">
                     <a href="project.php?id=<?php echo $project['project_id']; ?>">
-                        <img src="src/images/<?php echo $project['front_image']; ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
+                        <img src="src/images/<?php echo $project['additional_image']; ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
                         <div class="text"><?php echo htmlspecialchars($project['title']); ?></div>
                     </a>
                 </div>
@@ -96,7 +96,7 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php for ($i = 0; $i < $slidesToClone; $i++): ?>
                 <div class="slide duplicate">
                     <a href="project.php?id=<?php echo $projects[$i]['project_id']; ?>">
-                        <img src="src/images/<?php echo $projects[$i]['front_image']; ?>" 
+                        <img src="src/images/<?php echo $projects[$i]['additional_image']; ?>" 
                              alt="<?php echo htmlspecialchars($projects[$i]['title']); ?>">
                         <div class="text"><?php echo htmlspecialchars($projects[$i]['title']); ?></div>
                     </a>
