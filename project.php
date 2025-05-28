@@ -54,7 +54,7 @@ $project_documents = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
 
         <?php if (!empty($project['external_link'])): ?>
-            <p class="link"><a href="<?php echo htmlspecialchars($project['external_link']); ?>" target="_blank"><?php echo htmlspecialchars($project['external_link']); ?></a></p>
+            <p class="link"><a href="<?php echo htmlspecialchars($project['external_link']); ?>" target="_blank"> Klik hier om de website te bekijken</a></p>
         <?php endif; ?>
     </div>
 
